@@ -11,11 +11,11 @@
         .hidden { display: none; }
         .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .star-icon { width: 22px; height: 22px; fill: #ffcc00; }
+        .star-icon { width: 18px; height: 18px; fill: #ffcc00; }
         .testimonial-star { width: 14px; height: 14px; fill: #ffcc00; }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen flex items-center justify-center p-2">
 
     <!-- CONFIGURATION -->
     <script>
@@ -69,50 +69,50 @@
         </div>
     </div>
 
-    <!-- SCREEN 2: Landing Page (1:1 UI MATCH) -->
+    <!-- SCREEN 2: Landing Page (1:1 MATCH) -->
     <div id="screen2" class="hidden max-w-lg w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 fade-in">
-        <div class="p-8">
-            <div class="flex justify-center mb-6">
+        <div class="p-6 sm:p-8">
+            <div class="flex justify-center mb-4">
                 <img id="brand-logo" src="" alt="SHEIN Logo" class="h-10 object-contain">
             </div>
 
-            <h1 class="text-2xl font-black text-center text-gray-900 leading-tight mb-8">
+            <h1 class="text-[22px] font-black text-center text-gray-900 leading-tight mb-6">
                 Become a <span class="brand-text">SHEIN</span> Product Reviewer? Follow the steps below to QUALIFY!
             </h1>
 
-            <div class="bg-white border border-gray-100 rounded-3xl p-8 mb-8 shadow-sm">
-                <ul class="space-y-5 text-center text-lg text-gray-800">
+            <div class="bg-white border border-gray-100 rounded-[2rem] p-6 mb-6 shadow-sm">
+                <ul class="space-y-4 text-center text-[17px] text-gray-800">
                     <li><span class="font-bold">1.</span> Click "apply now"</li>
                     <li><span class="font-bold">2.</span> Enter your email & basic info</li>
                     <li><span class="font-bold">3.</span> Complete 2-4 deals <span class="font-black">(IMPORTANT)</span></li>
                     <li><span class="font-bold">4.</span> Get your <span class="reward-text">USD 750</span> Gift Card!</li>
                 </ul>
-                <div class="mt-8 pt-6 border-t border-gray-100 text-center text-sm font-medium text-gray-400 italic">
+                <div class="mt-6 pt-4 border-t border-gray-50 text-center text-xs font-medium text-gray-400 italic">
                     💡 Pro tip: Focus on the quick & easy deals!
                 </div>
             </div>
 
-            <a id="cta-link" href="#" class="block w-full bg-black text-white text-center py-6 rounded-2xl text-xl font-black uppercase tracking-[0.2em] transition-all transform hover:scale-[1.02] active:scale-95 shadow-xl shadow-gray-300">
+            <a id="cta-link" href="#" class="block w-full bg-black text-white text-center py-5 rounded-2xl text-xl font-black uppercase tracking-[0.2em] transition-all transform hover:scale-[1.01] active:scale-95 shadow-xl shadow-gray-200">
                 APPLY NOW
             </a>
 
-            <!-- 1:1 STAR RATING SECTION -->
-            <div class="mt-8 flex flex-col items-center">
-                <div class="flex gap-0.5 mb-1">
+            <!-- INLINE RATING SECTION -->
+            <div class="mt-6 flex items-center justify-center gap-2">
+                <div class="flex gap-0.5">
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 </div>
-                <p class="text-[17px] font-bold text-gray-900">
-                    4.9/5 <span class="font-normal text-gray-400 ml-1">(2,847 reviews)</span>
+                <p class="text-[18px] font-bold text-gray-900">
+                    4.9/5 <span class="font-normal text-gray-400 ml-1 text-base">(2,847 reviews)</span>
                 </p>
             </div>
 
-            <!-- 1:1 TESTIMONIALS -->
+            <!-- WHITE TESTIMONIAL BOXES -->
             <div class="mt-6 space-y-3">
-                <div class="bg-gray-50/60 p-5 rounded-2xl border border-gray-50">
+                <div class="bg-white p-5 rounded-2xl border border-gray-100">
                     <div class="flex gap-0.5 mb-2">
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -120,11 +120,11 @@
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
-                    <p class="text-[15px] font-medium text-gray-800 leading-snug">"Got my USD 750 card in 5 days! Super easy process 🎉"</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Got my USD 750 card in 5 days! Super easy process 🎉"</p>
                     <p class="text-[12px] text-gray-400 mt-2">— Sarah M., verified</p>
                 </div>
 
-                <div class="bg-gray-50/60 p-5 rounded-2xl border border-gray-50">
+                <div class="bg-white p-5 rounded-2xl border border-gray-100">
                     <div class="flex gap-0.5 mb-2">
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -132,13 +132,13 @@
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
-                    <p class="text-[15px] font-medium text-gray-800 leading-snug">"Legit! Just completed 3 deals and got approved instantly"</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Legit! Just completed 3 deals and got approved instantly"</p>
                     <p class="text-[12px] text-gray-400 mt-2">— Jessica T., verified</p>
                 </div>
             </div>
 
-            <!-- 1:1 CHECKMARK SECTION -->
-            <div class="mt-6 mb-2 flex items-center justify-center gap-2 text-sm font-medium text-gray-500">
+            <!-- GREEN SQUARE CHECKBOX FOOTER -->
+            <div class="mt-6 mb-2 flex items-center justify-center gap-2 text-[13px] font-medium text-gray-500">
                 <div class="w-5 h-5 bg-[#31c440] rounded flex items-center justify-center">
                     <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 </div>
