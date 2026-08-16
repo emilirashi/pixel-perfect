@@ -11,6 +11,9 @@
         .hidden { display: none; }
         .fade-in { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .star-color { color: #F4B400; }
+        .rating-text { color: #111827; }
+        .review-text { color: #6B7280; }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
@@ -23,7 +26,6 @@
             primaryColor: "#000000", 
             buttonTextColor: "#ffffff",
             affiliateLink: "https://giftclick.org/aff_c?offer_id=1229&aff_id=191194",
-            // UPDATED LOGO LINK
             logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAThKnHXhHKRtCucFcX1bHK_hN4ChqwSmGP8N0sXm9Fw&s=10" 
         };
     </script>
@@ -97,29 +99,31 @@
                 APPLY NOW
             </a>
 
-            <!-- BOTTOM SECTION DESIGN -->
-            <div class="mt-10 text-center">
-                <div class="flex justify-center gap-1 text-[#ffcc00] text-2xl mb-1">★★★★★</div>
-                <p class="text-xl font-bold text-gray-900">
-                    4.9/5 <span class="font-normal text-gray-400 text-lg">(2,847 reviews)</span>
+            <!-- UPDATED AUTHENTIC RATING SECTION -->
+            <div class="mt-8 text-center">
+                <div class="flex justify-center gap-0.5 star-color text-xl mb-0.5">★★★★★</div>
+                <p class="text-lg font-bold rating-text">
+                    4.9/5 <span class="font-medium review-text text-base">(2,847 reviews)</span>
                 </p>
             </div>
 
-            <div class="mt-8 space-y-4">
-                <div class="bg-[#f9fafb] p-6 rounded-2xl border border-gray-100">
-                    <div class="flex text-[#ffcc00] text-sm mb-2">★★★★★</div>
-                    <p class="text-[15px] font-medium text-gray-800 leading-snug">"Got my $750 card in 5 days! Super easy process 🎉"</p>
-                    <p class="text-sm text-gray-500 mt-2">— Sarah M., verified</p>
+            <div class="mt-6 space-y-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#f9fafb] p-5 rounded-xl border border-gray-100">
+                    <div class="flex star-color text-xs mb-1.5">★★★★★</div>
+                    <p class="text-[14px] font-semibold rating-text leading-snug">"Got my $750 card in 5 days! Super easy process 🎉"</p>
+                    <p class="text-[11px] review-text mt-1.5 font-medium">— Sarah M., verified</p>
                 </div>
-                <div class="bg-[#f9fafb] p-6 rounded-2xl border border-gray-100">
-                    <div class="flex text-[#ffcc00] text-sm mb-2">★★★★★</div>
-                    <p class="text-[15px] font-medium text-gray-800 leading-snug">"Legit! Just completed 3 deals and got approved instantly"</p>
-                    <p class="text-sm text-gray-500 mt-2">— Jessica T., verified</p>
+                <!-- Testimonial 2 -->
+                <div class="bg-[#f9fafb] p-5 rounded-xl border border-gray-100">
+                    <div class="flex star-color text-xs mb-1.5">★★★★★</div>
+                    <p class="text-[14px] font-semibold rating-text leading-snug">"Legit! Just completed 3 deals and got approved instantly"</p>
+                    <p class="text-[11px] review-text mt-1.5 font-medium">— Jessica T., verified</p>
                 </div>
             </div>
 
-            <div class="mt-8 mb-4 flex items-center justify-center gap-2 text-sm font-bold text-gray-500 uppercase tracking-tight">
-                <span class="text-xl text-green-600">✅</span> 12,400+ gift cards claimed this month
+            <div class="mt-8 mb-4 flex items-center justify-center gap-2 text-[11px] font-bold review-text uppercase tracking-tight">
+                <span class="text-lg text-green-600">✅</span> 12,400+ gift cards claimed this month
             </div>
         </div>
     </div>
