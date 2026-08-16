@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reviewer Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        .hidden { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- CONFIGURATION -->
+    <script>
+        const CONFIG = {
+            brandName: "SHEIN",
+            rewardAmount: "USD 750",
+            primaryColor: "#000000", 
+            buttonTextColor: "#ffffff",
+            // UPDATED AFFILIATE LINK
+            affiliateLink: "https://giftclick.org/aff_c?offer_id=1229&aff_id=191194",
+            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Shein_logo.svg/2560px-Shein_logo.svg.png" 
+        };
+    </script>
+
+    <!-- SCREEN 1: Survey -->
+    <div id="screen1" class="max-w-2xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 fade-in">
+        <div class="bg-black text-white p-10 text-center relative">
+            <div class="absolute top-4 right-4 bg-green-500 text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                ⚡ Act now rewards are moving fast!
+            </div>
+            <h1 class="text-3xl font-black mt-6">Get <span class="reward-text">USD 750</span> Towards <span class="brand-text">SHEIN</span></h1>
+            
+            <div class="mt-8 flex justify-center">
+                <div class="relative w-72 h-44 bg-gray-100 rounded-2xl flex flex-col items-center justify-center border-4 border-white shadow-xl overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#000_10px,#000_20px)]"></div>
+                    <span class="text-5xl font-black text-black z-10 reward-text">USD 750</span>
+                    <span class="text-2xl font-bold tracking-widest uppercase mt-2 z-10 brand-text">SHEIN</span>
+                    <p class="text-[8px] mt-2 opacity-60 z-10">Offer not sponsored-endorsed by this brand.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-10">
+            <div class="flex items-center justify-between mb-10">
+                <div class="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden mr-6">
+                    <div class="w-1/3 h-full bg-black"></div>
+                </div>
+                <span class="text-sm text-gray-400 font-semibold whitespace-nowrap">Question 1 of 3</span>
+            </div>
+
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-10">Do you like <span class="brand-text">SHEIN</span>?</h2>
+
+            <div class="grid grid-cols-1 gap-4">
+                <button onclick="showScreen2()" class="w-full flex items-center justify-center gap-4 py-6 border-2 border-gray-100 rounded-3xl hover:border-black hover:bg-gray-50 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform">👍</span>
+                    <span class="text-xl font-bold text-gray-700">Yes</span>
+                </button>
+                <button onclick="showScreen2()" class="w-full flex items-center justify-center gap-4 py-6 border-2 border-gray-100 rounded-3xl hover:border-black hover:bg-gray-50 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform">👎</span>
+                    <span class="text-xl font-bold text-gray-700">No</span>
+                </button>
+            </div>
+
+            <div class="mt-12 text-[10px] text-center text-gray-400 leading-relaxed uppercase tracking-widest px-4">
+                You must complete the <span class="underline cursor-pointer">Purchase & Program Requirements</span> in order to earn your reward. <br>
+                Trade names or rights associated with all brands on this site are the property of their respective owners.
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 2: Landing Page -->
+    <div id="screen2" class="hidden max-w-lg w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 fade-in">
+        <div class="p-10">
+            <div class="flex justify-center mb-8">
+                <img id="brand-logo" src="" alt="Brand Logo" class="h-10 object-contain">
+            </div>
+
+            <h1 class="text-2xl font-black text-center text-gray-900 leading-tight mb-10">
+                Become a <span class="brand-text">SHEIN</span> Product Reviewer? Follow the steps below to QUALIFY!
+            </h1>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 mb-10">
+                <ul class="space-y-5 text-center text-lg text-gray-800">
+                    <li><span class="font-black">1.</span> Click "apply now"</li>
+                    <li><span class="font-black">2.</span> Enter your email & basic info</li>
+                    <li><span class="font-black">3.</span> Complete 2-4 deals <span class="text-black font-black">(IMPORTANT)</span></li>
+                    <li><span class="font-black">4.</span> Get your <span class="reward-text">USD 750</span> Gift Card!</li>
+                </ul>
+                <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm font-medium text-gray-500 italic">
+                    💡 Pro tip: Focus on the quick & easy deals!
+                </div>
+            </div>
+
+            <a id="cta-link" href="#" class="block w-full bg-black text-white text-center py-6 rounded-2xl text-xl font-black uppercase tracking-[0.2em] transition-all transform hover:scale-[1.02] active:scale-95 shadow-xl shadow-gray-200">
+                APPLY NOW
+            </a>
+
+            <div class="mt-10 text-center">
+                <div class="flex justify-center gap-1 text-yellow-400 text-xl mb-1">★★★★★</div>
+                <p class="text-sm font-bold text-gray-800">4.9/5 <span class="font-normal text-gray-500">(2,847 reviews)</span></p>
+            </div>
+
+            <div class="mt-10 space-y-4">
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+                    <p class="text-sm font-semibold text-gray-700 italic leading-relaxed">"Got my reward in 5 days! Super easy process 🎉"</p>
+                    <p class="text-[10px] text-gray-400 mt-3 font-bold uppercase tracking-wider">— Sarah M., verified</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+                    <p class="text-sm font-semibold text-gray-700 italic leading-relaxed">"Legit! Just completed 3 deals and got approved instantly"</p>
+                    <p class="text-[10px] text-gray-400 mt-3 font-bold uppercase tracking-wider">— Jessica T., verified</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex items-center justify-center gap-2 text-xs font-black text-gray-600 uppercase tracking-widest">
+                <span class="text-green-500 text-lg">✓</span> 12,400+ gift cards claimed this month
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.brand-text').forEach(el => el.textContent = CONFIG.brandName);
+        document.querySelectorAll('.reward-text').forEach(el => el.textContent = CONFIG.rewardAmount);
+        document.getElementById('brand-logo').src = CONFIG.logoUrl;
+        document.getElementById('cta-link').href = CONFIG.affiliateLink;
+
+        function showScreen2() {
+            document.getElementById('screen1').classList.add('hidden');
+            document.getElementById('screen2').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
