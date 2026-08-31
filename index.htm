@@ -53,24 +53,24 @@
             brandName: "SHEIN",
             rewardAmount: "USD 750",
             affiliateLink: "https://giftclick.org/aff_c?offer_id=1229&aff_id=191194",
-            logoUrl: "https://img.icons8.com/ios_filled/1200/shein.jpg"
+            logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAThKnHXhHKRtCucFcX1bHK_hN4ChqwSmGP8N0sXm9Fw&s=10"
         };
     </script>
 
-    <!-- SOCIAL PROOF NOTIFICATION (1:1 MATCH WITH IMG_4551) -->
+    <!-- SOCIAL PROOF NOTIFICATION (RANDOMIZED FROM IMAGES) -->
     <div id="notification-popup" class="bg-white border border-gray-100 rounded-2xl shadow-xl p-4 flex items-center gap-4 max-w-[320px] w-full">
         <div id="notif-avatar" class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl shrink-0">
-            S
+            L
         </div>
         <div class="flex flex-col">
             <p class="text-[14px] text-gray-900 font-bold leading-tight">
-                <span id="notif-name">Sarah K.</span> completed 4 deals
+                <span id="notif-name">Lisa M.</span> completed <span id="notif-deals">8</span> deals
             </p>
             <p class="text-[14px] text-gray-600">
-                Received <span class="text-green-600 font-bold">$100</span> gift card
+                Received <span id="notif-amount" class="text-green-600 font-bold">$350</span> gift card
             </p>
             <p class="text-[12px] text-gray-400 mt-0.5">
-                <span id="notif-location">New York</span> - Just now
+                <span id="notif-location">California</span> - Just now
             </p>
         </div>
     </div>
@@ -199,24 +199,27 @@
             arrow.classList.toggle('rotated');
         }
 
-        // SOCIAL PROOF NOTIFICATION LOGIC
+        // UPDATED RANDOMIZED NOTIFICATIONS FROM IMAGES
         const notifications = [
-            { name: "Sarah K.", deals: "4", amount: "$100", location: "New York", color: "bg-green-500" },
-            { name: "Michael T.", deals: "5", amount: "$150", location: "Los Angeles", color: "bg-blue-500" },
-            { name: "Emily R.", deals: "3", amount: "$50", location: "Chicago", color: "bg-purple-500" },
-            { name: "David L.", deals: "4", amount: "$100", location: "Miami", color: "bg-orange-500" }
+            { name: "Lisa M.", deals: "8", amount: "$350", location: "California" },
+            { name: "Mike R.", deals: "20", amount: "$1000", location: "Florida" },
+            { name: "Chris P.", deals: "12", amount: "$500", location: "Ohio" },
+            { name: "Nicole H.", deals: "10", amount: "$400", location: "Illinois" },
+            { name: "John D.", deals: "5", amount: "$150", location: "Texas" },
+            { name: "Sarah K.", deals: "4", amount: "$100", location: "New York" }
         ];
 
-        let notifIndex = 0;
         const popup = document.getElementById('notification-popup');
 
         function showNotification() {
-            const data = notifications[notifIndex];
+            // Pick a random notification
+            const data = notifications[Math.floor(Math.random() * notifications.length)];
             
             // Update content
             document.getElementById('notif-avatar').textContent = data.name.charAt(0);
-            document.getElementById('notif-avatar').className = `w-12 h-12 rounded-full ${data.color} flex items-center justify-center text-white font-bold text-xl shrink-0`;
             document.getElementById('notif-name').textContent = data.name;
+            document.getElementById('notif-deals').textContent = data.deals;
+            document.getElementById('notif-amount').textContent = data.amount;
             document.getElementById('notif-location').textContent = data.location;
             
             // Show popup
@@ -225,15 +228,14 @@
             // Hide after 4 seconds
             setTimeout(() => {
                 popup.classList.remove('show');
-                notifIndex = (notifIndex + 1) % notifications.length;
-                
-                // Show next one after a delay
-                setTimeout(showNotification, 5000);
+                // Show next one after a random delay between 5-8 seconds
+                setTimeout(showNotification, 5000 + Math.random() * 3000);
             }, 4000);
         }
 
-        // Start cycling after 3 seconds
+        // Start randomized cycle
         setTimeout(showNotification, 3000);
     </script>
 </body>
 </html>
+
