@@ -30,6 +30,19 @@
         #faq-arrow.rotated {
             transform: rotate(180deg);
         }
+
+        /* Social Proof Notification Styles */
+        #notification-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            transform: translateX(-120%);
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        #notification-popup.show {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-2 sm:p-4">
@@ -43,6 +56,24 @@
             logoUrl: "https://img.icons8.com/ios_filled/1200/shein.jpg"
         };
     </script>
+
+    <!-- SOCIAL PROOF NOTIFICATION (1:1 MATCH WITH IMG_4551) -->
+    <div id="notification-popup" class="bg-white border border-gray-100 rounded-2xl shadow-xl p-4 flex items-center gap-4 max-w-[320px] w-full">
+        <div id="notif-avatar" class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl shrink-0">
+            S
+        </div>
+        <div class="flex flex-col">
+            <p class="text-[14px] text-gray-900 font-bold leading-tight">
+                <span id="notif-name">Sarah K.</span> completed 4 deals
+            </p>
+            <p class="text-[14px] text-gray-600">
+                Received <span class="text-green-600 font-bold">$100</span> gift card
+            </p>
+            <p class="text-[12px] text-gray-400 mt-0.5">
+                <span id="notif-location">New York</span> - Just now
+            </p>
+        </div>
+    </div>
 
     <!-- SINGLE PAGE LANDING -->
     <div class="max-w-lg w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 fade-in">
@@ -63,7 +94,7 @@
                 <ul class="space-y-4 text-center text-[17px] text-gray-800">
                     <li><span class="font-bold">1.</span> Complete a simple questionnaire</li>
                     <li><span class="font-bold">2.</span> Enter your basic details & apply</li>
-                    <li><span class="font-bold">3.</span> Get Shopping credit <span class="font-black"></span></li>
+                    <li><span class="font-bold">3.</span> Get Shopping credit <span class="font-black">(USD 750)</span></li>
                     <li><span class="font-bold">4.</span> Click "APPLY NOW" to get started</li>
                 </ul>
                 <div class="mt-6 pt-4 border-t border-gray-50 text-center text-xs font-medium text-gray-400 italic">
@@ -114,9 +145,8 @@
                 </p>
             </div>
 
-            <!-- UPDATED TESTIMONIALS (FROM IMAGES) -->
+            <!-- TESTIMONIALS -->
             <div class="mt-6 space-y-3">
-                <!-- Sarah M. -->
                 <div class="bg-white p-5 rounded-2xl border border-gray-100">
                     <div class="flex justify-between items-start mb-1">
                         <p class="text-[16px] font-bold text-gray-900">Sarah M.</p>
@@ -132,7 +162,6 @@
                     <p class="text-[15px] font-normal text-gray-800 leading-snug">"Amazing idea! I completed all the deals in one evening and got my USD 750 within 48 hours. Totally legit!"</p>
                 </div>
 
-                <!-- Michael T. -->
                 <div class="bg-white p-5 rounded-2xl border border-gray-100">
                     <div class="flex justify-between items-start mb-1">
                         <p class="text-[16px] font-bold text-gray-900">Michael T.</p>
@@ -147,57 +176,9 @@
                     <p class="text-[12px] text-gray-400 mb-2">1 week ago</p>
                     <p class="text-[15px] font-normal text-gray-800 leading-snug">"Skeptical at first, but this actually works. Just follow the instructions carefully and you'll get your reward. Worth the time!"</p>
                 </div>
-
-                <!-- Jennifer L. -->
-                <div class="bg-white p-5 rounded-2xl border border-gray-100">
-                    <div class="flex justify-between items-start mb-1">
-                        <p class="text-[16px] font-bold text-gray-900">Jennifer L.</p>
-                        <div class="flex gap-0.5">
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        </div>
-                    </div>
-                    <p class="text-[12px] text-gray-400 mb-2">5 days ago</p>
-                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Best decision ever! The deals were easy to complete and customer support was helpful when I had questions."</p>
-                </div>
-
-                <!-- David R. -->
-                <div class="bg-white p-5 rounded-2xl border border-gray-100">
-                    <div class="flex justify-between items-start mb-1">
-                        <p class="text-[16px] font-bold text-gray-900">David R.</p>
-                        <div class="flex gap-0.5">
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        </div>
-                    </div>
-                    <p class="text-[12px] text-gray-400 mb-2">3 days ago</p>
-                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"I've tried other reward programs before but this one actually delivered. Completed 18 deals and received my payment on time."</p>
-                </div>
-
-                <!-- Amanda K. -->
-                <div class="bg-white p-5 rounded-2xl border border-gray-100">
-                    <div class="flex justify-between items-start mb-1">
-                        <p class="text-[16px] font-bold text-gray-900">Amanda K.</p>
-                        <div class="flex gap-0.5">
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        </div>
-                    </div>
-                    <p class="text-[12px] text-gray-400 mb-2">1 week ago</p>
-                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Super straightforward process. Made sure to keep track of your deals and take screenshots. Got my $750 reward!"</p>
-                </div>
             </div>
 
-            <!-- GREEN SQUARE CHECKBOX FOOTER -->
+            <!-- FOOTER -->
             <div class="mt-6 mb-2 flex items-center justify-center gap-2 text-[13px] font-medium text-gray-500">
                 <div class="w-5 h-5 bg-[#31c440] rounded flex items-center justify-center">
                     <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
@@ -214,10 +195,45 @@
         function toggleFAQ() {
             const content = document.getElementById('faq-content');
             const arrow = document.getElementById('faq-arrow');
-            
             content.classList.toggle('collapsed');
             arrow.classList.toggle('rotated');
         }
+
+        // SOCIAL PROOF NOTIFICATION LOGIC
+        const notifications = [
+            { name: "Sarah K.", deals: "4", amount: "$100", location: "New York", color: "bg-green-500" },
+            { name: "Michael T.", deals: "5", amount: "$150", location: "Los Angeles", color: "bg-blue-500" },
+            { name: "Emily R.", deals: "3", amount: "$50", location: "Chicago", color: "bg-purple-500" },
+            { name: "David L.", deals: "4", amount: "$100", location: "Miami", color: "bg-orange-500" }
+        ];
+
+        let notifIndex = 0;
+        const popup = document.getElementById('notification-popup');
+
+        function showNotification() {
+            const data = notifications[notifIndex];
+            
+            // Update content
+            document.getElementById('notif-avatar').textContent = data.name.charAt(0);
+            document.getElementById('notif-avatar').className = `w-12 h-12 rounded-full ${data.color} flex items-center justify-center text-white font-bold text-xl shrink-0`;
+            document.getElementById('notif-name').textContent = data.name;
+            document.getElementById('notif-location').textContent = data.location;
+            
+            // Show popup
+            popup.classList.add('show');
+
+            // Hide after 4 seconds
+            setTimeout(() => {
+                popup.classList.remove('show');
+                notifIndex = (notifIndex + 1) % notifications.length;
+                
+                // Show next one after a delay
+                setTimeout(showNotification, 5000);
+            }, 4000);
+        }
+
+        // Start cycling after 3 seconds
+        setTimeout(showNotification, 3000);
     </script>
 </body>
 </html>
