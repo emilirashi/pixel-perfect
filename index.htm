@@ -12,6 +12,25 @@
         .testimonial-star { width: 14px; height: 14px; fill: #ffcc00; }
         .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Accordion Styles */
+        #faq-content {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+            overflow: hidden;
+        }
+        #faq-content.collapsed {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        #faq-arrow {
+            transition: transform 0.3s ease;
+        }
+        #faq-arrow.rotated {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-2 sm:p-4">
@@ -58,13 +77,15 @@
                 APPLY NOW
             </a>
 
-            <!-- NEW: COMMON QUESTIONS SECTION (1:1 MATCH WITH SCREENSHOT) -->
+            <!-- FAQ SECTION (WITH TOGGLE) -->
             <div class="mt-8 bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-                <div class="p-5 border-b border-gray-50 flex justify-between items-center">
+                <div onclick="toggleFAQ()" class="p-5 flex justify-between items-center cursor-pointer hover:bg-gray-50 transition-colors">
                     <h2 class="text-xl font-bold text-gray-900">Common Questions</h2>
-                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    <svg id="faq-arrow" class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                    </svg>
                 </div>
-                <div class="p-6 space-y-6">
+                <div id="faq-content" class="p-6 space-y-6 border-t border-gray-50">
                     <div>
                         <h3 class="text-[17px] font-bold text-gray-900 mb-1">How long do the deals last?</h3>
                         <p class="text-gray-500 text-[15px]">Quick 10-20 minute completion time per deal</p>
@@ -132,9 +153,19 @@
     </div>
 
     <script>
+        // Initialize the page with CONFIG values
         document.getElementById('brand-logo').src = CONFIG.logoUrl;
         document.getElementById('cta-link').href = CONFIG.affiliateLink;
+
+        function toggleFAQ() {
+            const content = document.getElementById('faq-content');
+            const arrow = document.getElementById('faq-arrow');
+            
+            content.classList.toggle('collapsed');
+            arrow.classList.toggle('rotated');
+        }
     </script>
 </body>
 </html>
+
 
