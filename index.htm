@@ -30,7 +30,7 @@
     <div class="max-w-lg w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 fade-in">
         <div class="p-6 sm:p-8">
             
-            <!-- LOGO SECTION (MADE LARGER) -->
+            <!-- LOGO SECTION -->
             <div class="flex justify-center mb-6">
                 <img id="brand-logo" src="" alt="SHEIN Logo" class="h-16 w-auto object-contain">
             </div>
@@ -45,7 +45,7 @@
                 <ul class="space-y-4 text-center text-[17px] text-gray-800">
                     <li><span class="font-bold">1.</span> Complete a simple questionnaire</li>
                     <li><span class="font-bold">2.</span> Enter your basic details & apply</li>
-                    <li><span class="font-bold">3.</span> Get Shopping credit <span class="font-black"></span></li>
+                    <li><span class="font-bold">3.</span> Get Shopping credit <span class="font-black">(USD 750)</span></li>
                     <li><span class="font-bold">4.</span> Click "APPLY NOW" to get started</li>
                 </ul>
                 <div class="mt-6 pt-4 border-t border-gray-50 text-center text-xs font-medium text-gray-400 italic">
@@ -58,8 +58,30 @@
                 APPLY NOW
             </a>
 
-            <!-- INLINE RATING SECTION (STARS FIRST) -->
-            <div class="mt-6 flex items-center justify-center gap-2">
+            <!-- NEW: COMMON QUESTIONS SECTION (1:1 MATCH WITH SCREENSHOT) -->
+            <div class="mt-8 bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-5 border-b border-gray-50 flex justify-between items-center">
+                    <h2 class="text-xl font-bold text-gray-900">Common Questions</h2>
+                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                </div>
+                <div class="p-6 space-y-6">
+                    <div>
+                        <h3 class="text-[17px] font-bold text-gray-900 mb-1">How long do the deals last?</h3>
+                        <p class="text-gray-500 text-[15px]">Quick 10-20 minute completion time per deal</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[17px] font-bold text-gray-900 mb-1">What are deals?</h3>
+                        <p class="text-gray-500 text-[15px]">Simple tasks like app downloads, surveys, or trial subscriptions with specific reward goals.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[17px] font-bold text-gray-900 mb-1">How many deals do I need?</h3>
+                        <p class="text-gray-500 text-[15px]">4-5 deals minimum. The more you do, the more you receive in gift card credits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INLINE RATING SECTION -->
+            <div class="mt-8 flex items-center justify-center gap-2">
                 <div class="flex gap-0.5">
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -72,7 +94,7 @@
                 </p>
             </div>
 
-            <!-- PURE WHITE TESTIMONIAL BOXES -->
+            <!-- WHITE TESTIMONIAL BOXES -->
             <div class="mt-6 space-y-3">
                 <div class="bg-white p-5 rounded-2xl border border-gray-100">
                     <div class="flex gap-0.5 mb-2">
@@ -110,9 +132,9 @@
     </div>
 
     <script>
-        // Initialize the page with CONFIG values
         document.getElementById('brand-logo').src = CONFIG.logoUrl;
         document.getElementById('cta-link').href = CONFIG.affiliateLink;
     </script>
 </body>
 </html>
+
