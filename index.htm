@@ -13,7 +13,6 @@
         .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* Accordion Styles */
         #faq-content {
             max-height: 500px;
             transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
@@ -64,7 +63,7 @@
                 <ul class="space-y-4 text-center text-[17px] text-gray-800">
                     <li><span class="font-bold">1.</span> Complete a simple questionnaire</li>
                     <li><span class="font-bold">2.</span> Enter your basic details & apply</li>
-                    <li><span class="font-bold">3.</span> Get Shopping credit <span class="font-black"></span></li>
+                    <li><span class="font-bold">3.</span> Get Shopping credit <span class="font-black">(USD 750)</span></li>
                     <li><span class="font-bold">4.</span> Click "APPLY NOW" to get started</li>
                 </ul>
                 <div class="mt-6 pt-4 border-t border-gray-50 text-center text-xs font-medium text-gray-400 italic">
@@ -77,7 +76,7 @@
                 APPLY NOW
             </a>
 
-            <!-- FAQ SECTION (WITH TOGGLE) -->
+            <!-- FAQ SECTION -->
             <div class="mt-8 bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
                 <div onclick="toggleFAQ()" class="p-5 flex justify-between items-center cursor-pointer hover:bg-gray-50 transition-colors">
                     <h2 class="text-xl font-bold text-gray-900">Common Questions</h2>
@@ -115,30 +114,86 @@
                 </p>
             </div>
 
-            <!-- WHITE TESTIMONIAL BOXES -->
+            <!-- UPDATED TESTIMONIALS (FROM IMAGES) -->
             <div class="mt-6 space-y-3">
+                <!-- Sarah M. -->
                 <div class="bg-white p-5 rounded-2xl border border-gray-100">
-                    <div class="flex gap-0.5 mb-2">
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-[16px] font-bold text-gray-900">Sarah M.</p>
+                        <div class="flex gap-0.5">
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
                     </div>
-                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Got my $750 card in 5 days! Super easy process 🎉"</p>
-                    <p class="text-[12px] text-gray-400 mt-2">— Sarah M., verified</p>
+                    <p class="text-[12px] text-gray-400 mb-2">2 days ago</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Amazing idea! I completed all the deals in one evening and got my USD 750 within 48 hours. Totally legit!"</p>
                 </div>
 
+                <!-- Michael T. -->
                 <div class="bg-white p-5 rounded-2xl border border-gray-100">
-                    <div class="flex gap-0.5 mb-2">
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-[16px] font-bold text-gray-900">Michael T.</p>
+                        <div class="flex gap-0.5">
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
                     </div>
-                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Legit! Just completed 3 deals and got approved instantly"</p>
-                    <p class="text-[12px] text-gray-400 mt-2">— Jessica T., verified</p>
+                    <p class="text-[12px] text-gray-400 mb-2">1 week ago</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Skeptical at first, but this actually works. Just follow the instructions carefully and you'll get your reward. Worth the time!"</p>
+                </div>
+
+                <!-- Jennifer L. -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-100">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-[16px] font-bold text-gray-900">Jennifer L.</p>
+                        <div class="flex gap-0.5">
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                    </div>
+                    <p class="text-[12px] text-gray-400 mb-2">5 days ago</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Best decision ever! The deals were easy to complete and customer support was helpful when I had questions."</p>
+                </div>
+
+                <!-- David R. -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-100">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-[16px] font-bold text-gray-900">David R.</p>
+                        <div class="flex gap-0.5">
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                    </div>
+                    <p class="text-[12px] text-gray-400 mb-2">3 days ago</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"I've tried other reward programs before but this one actually delivered. Completed 18 deals and received my payment on time."</p>
+                </div>
+
+                <!-- Amanda K. -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-100">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-[16px] font-bold text-gray-900">Amanda K.</p>
+                        <div class="flex gap-0.5">
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                    </div>
+                    <p class="text-[12px] text-gray-400 mb-2">1 week ago</p>
+                    <p class="text-[15px] font-normal text-gray-800 leading-snug">"Super straightforward process. Made sure to keep track of your deals and take screenshots. Got my USD 750 reward!"</p>
                 </div>
             </div>
 
@@ -153,7 +208,6 @@
     </div>
 
     <script>
-        // Initialize the page with CONFIG values
         document.getElementById('brand-logo').src = CONFIG.logoUrl;
         document.getElementById('cta-link').href = CONFIG.affiliateLink;
 
@@ -167,5 +221,3 @@
     </script>
 </body>
 </html>
-
-
